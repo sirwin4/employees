@@ -19,6 +19,10 @@ class Company_Employee(object):
             self.company_name = input_name
         
 
+    def quit(self):
+        self.company_name.leaving_employee(self)
+        self.company_name = None
+
     def get_company_name(self):
         if(self.company_name is None):
             return "No Company"
@@ -75,9 +79,12 @@ otherCorp.hire_employee(joe)
 
 otherCorp.fire_employee(joe)
 
+john.quit()
+
 print(joe.get_company_name())
 
 
+print(len(evilCorp.employees))
 
 
     # Add the remaining methods to fill the requirements above
